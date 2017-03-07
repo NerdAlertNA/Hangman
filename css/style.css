@@ -49,14 +49,6 @@
 	text-align: center;
 }
 
-/*
-.page-wrap { 
-  width: 100px; 
-  margin: 15px auto; 
-  position: left;
-}
-*/
-
 .nav {
 
 }
@@ -76,4 +68,8 @@
 	height: 500px;
 	width: 500px;
 	background-color: orange;
+}
+
+div.image {
+	content: url("images/0hangman-empty.jpg");
 }
