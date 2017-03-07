@@ -64,12 +64,109 @@
 	background-color: red;
 }
 
-.gameboard {
-	height: 500px;
-	width: 500px;
+.game-board {
 	background-color: orange;
+	display: flex;
+	justify-content: center;
 }
 
-div.image {
+#image0 {
 	content: url("images/0hangman-empty.jpg");
+	height: 550px;
+	width: 500px;
 }
+
+#image1 {
+	content: url("images/0hangman-noose.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image2 {
+	content: url("images/1hangman-head.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image3 {
+	content: url("images/2hangman-body.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image4 {
+	content: url("images/3hangman-leftArm.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image5 {
+	content: url("images/3hangman-rightArm.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image6 {
+	content: url("images/4hangman-leftLeg.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image7 {
+	content: url("images/4hangman-rightLeg.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image8 {
+	content: url("images/5hangman-leftFoot.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image9 {
+	content: url("images/5hangman-rightFoot.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#image10 {
+	content: url("images/6hangman-dead.jpg");
+	height: 550px;
+	width: 500px;
+	display: none;
+}
+
+#keyboard {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+    #keyboard li {
+    float: left;
+    margin: 5px 5px 5px 0;
+    width: 45px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    border-radius: 7px;
+    }
+
+        #keyboard li:hover {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        border-color: #e5e5e5;
+        }
