@@ -7,11 +7,11 @@ window.onload = function() {
 	// list of possible words
 	var wordBank = ["computer", "program", "mouse", "keyboard", "javascript", "css", "html", "website"];
 	
-	// the word to guess picked at random from wordBank
-	var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-	var wordToGuess = randomWord.split('');
+	var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)]; // Randomly selects a word from wordBank
+	
+	var wordToGuess = randomWord.split(''); // splits the chosen word into a new array
 
-	for (var i = 0; i < wordToGuess.length; i++) {
+	for (var i = 0; i < wordToGuess.length; i++) { // replaces the word to be displayed with underscores
 		wordToGuess[i] = '_';
 	}
 	
@@ -19,8 +19,8 @@ window.onload = function() {
 	
 
 
-	// display the word in the game.
-	document.getElementById("word").innerHTML = wordToGuess.join(' ');
+	
+	document.getElementById("word").innerHTML = wordToGuess.join(' ');// display the word in the game.
 
 
 
