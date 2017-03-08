@@ -8,12 +8,20 @@ window.onload = function() {
 	var wordBank = ["computer", "program", "mouse", "keyboard", "javascript", "css", "html", "website"];
 	
 	// the word to guess picked at random from wordBank
-	var word = wordBank[Math.floor(Math.random() * wordBank.length)];
+	var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+	var wordToGuess = randomWord.split('');
+
+	for (var i = 0; i < wordToGuess.length; i++) {
+		wordToGuess[i] = '_';
+	}
 	
 	var guessedLetters; // letters that have been guessed.
-	var blankSpaces // blank spaces to be filled by correct answers.
+	
 
 
-	//display the word in the game.
-	document.getElementById("word").innerHTML = word;
+	// display the word in the game.
+	document.getElementById("word").innerHTML = wordToGuess.join(' ');
+
+
+
 }
