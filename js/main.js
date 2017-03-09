@@ -14,11 +14,24 @@ window.onload = function() {
 	console.log(wordToGuessSplit);
 	console.log(wordToGuess);
 
-	for (var i = 0; i < wordToGuess.length; i++) {
-		wordToGuess[i] = '_ ';
-	}
 
-	console.log(wordToGuess);
+// var n = str.includes("world");
+	$('#submit').on('click', function() { // event listener
+		var guessedLetter = $('#guessInput').val();
+		if (!wordToGuess.includes(guessedLetter)) {
+			alert('INCORRECT');
+		}
+
+			
+	});
+};
+
+
+	// for (var i = 0; i < wordToGuess.length; i++) {
+	// 	wordToGuess[i] = '_ ';
+	// }
+
+	//console.log(wordToGuess);
 // GIVEN I am on the game page
 // WHEN I type a letter 
 // AND the letter is not in the word
@@ -45,10 +58,5 @@ window.onload = function() {
 //     alert("The paragraph was clicked.");
 // });$("input:text").val("Glenn Quagmire");
 
-	$('#submit').on('click', function() {
-		var x = $('#guessInput').val();
-		alert(x);
-	});
-};
 
 
