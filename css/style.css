@@ -122,11 +122,6 @@
 	}
 
 	#image9 {
-		content: url("images/5hangman-rightFoot.jpg");
-		display: none;
-	}
-
-	#image10 {
 		content: url("images/6hangman-dead.jpg");
 		display: none;
 	}
