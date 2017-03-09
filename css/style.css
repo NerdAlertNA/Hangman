@@ -150,6 +150,19 @@
     	}
 
   	#word {
-    	border: 3px;
-    	font-size: 40px;
+    	font-size: 50px;
+    	display: flex;
+		justify-content: center;
+    }
+
+    #guessInput {
+    	height: 50px;
+    	width: 50px;
+    	font-size: 30px;
+    	text-align: center;
+    }
+
+    #submit {
+    	height: 50px;
+    	width: 75px;
     }
