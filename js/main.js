@@ -35,6 +35,42 @@ window.onload = function() {
 				console.log(wrongGuess);
 				console.log(wrongLettersArray);
 				$('#incorrect').append(guessedLetter);
+				if (wrongGuess === 1) {
+					$('#image0').hide();
+					$('#image1').show();
+				}
+				if (wrongGuess === 2) {
+					$('#image1').hide();
+					$('#image2').show();
+				}
+				if (wrongGuess === 3) {
+					$('#image2').hide();
+					$('#image3').show();
+				}
+				if (wrongGuess === 4) {
+					$('#image3').hide();
+					$('#image4').show();
+				}
+				if (wrongGuess === 5) {
+					$('#image4').hide();
+					$('#image5').show();
+				}
+				if (wrongGuess === 6) {
+					$('#image5').hide();
+					$('#image6').show();
+				}
+				if (wrongGuess === 7) {
+					$('#image6').hide();
+					$('#image7').show();
+				}
+				if (wrongGuess === 8) {
+					$('#image7').hide();
+					$('#image8').show();
+				}
+				if (wrongGuess === 9) {
+					$('#image8').hide();
+					$('#image9').show();
+				}
 				if (wrongGuess === 9) {					// if you guess wrong 9 times you lose.
 					alert('You are dead!');
 				}
