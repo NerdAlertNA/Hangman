@@ -40,18 +40,20 @@ window.onload = function() {
 				}
 			}
 			else {
-				alert('CORRECT');
-				for (var i = 0; i < randomWord.length; i++) { 	// cycles through each letter of the current word
-					if (randomWord[i] === guessedLetter) {    	// and if a match is found
-						rightLettersArray.push(guessedLetter);	// adds the letter to the correct guess array
-						console.log(rightLettersArray);		  	// even through multiple itterations.
-						$('#correct').append(guessedLetter);
-					}
-				}
-				if (rightLettersArray.length === randomWord.length) {   // if .length of array === .length of word
-					alert('You survived!');								// alert "You survived!"
-				}
-			}
+                alert('CORRECT');
+                for (var i = 0; i < randomWord.length; i++) {    // cycles through each letter of the current word
+                    if (randomWord[i] === guessedLetter) {      // and if a match is found
+                        rightLettersArray.push(guessedLetter);  // adds the letter to the correct guess array
+                        underscores[i] = guessedLetter;
+                        console.log(underscores);
+                    }
+                }
+                $('#word').empty();
+                $('#word').append(underscores);
+                if (rightLettersArray.length === randomWord.length) {   // if .length of array === .length of word
+                    alert('You survived!');                             // alert "You survived!"
+                }
+            }
 		}
 		else {
 			alert('You have already guessed that letter'); // if letter has been guess display this
@@ -65,5 +67,15 @@ window.onload = function() {
 
 
 
+
+// for(var i = 0; i < randomWord.length; i++) {
+//     if (randomWord[i] === guessedLettter) {
+//     //   console.log(word[i].indexOf(choice));
+//       underscores[i] = guessedLetter;
+//     //   console.log(arr);
+//     }
+// }
+
+// console.log(underscores);
 
 
