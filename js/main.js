@@ -34,6 +34,7 @@ window.onload = function() {
 				wrongLettersArray.push(guessedLetter);	 // and add letter to the incorrect guess array
 				console.log(wrongGuess);
 				console.log(wrongLettersArray);
+				$('#incorrect').append(guessedLetter);
 				if (wrongGuess === 9) {					// if you guess wrong 9 times you lose.
 					alert('You are dead!');
 				}
@@ -44,6 +45,7 @@ window.onload = function() {
 					if (randomWord[i] === guessedLetter) {    	// and if a match is found
 						rightLettersArray.push(guessedLetter);	// adds the letter to the correct guess array
 						console.log(rightLettersArray);		  	// even through multiple itterations.
+						$('#correct').append(guessedLetter);
 					}
 				}
 				if (rightLettersArray.length === randomWord.length) {   // if .length of array === .length of word
@@ -55,6 +57,9 @@ window.onload = function() {
 			alert('You have already guessed that letter'); // if letter has been guess display this
 		}
 	});
+
+	$('#incorrect').append(wrongLettersArray);
+	$('#correct').append(rightLettersArray);
 
 };
 

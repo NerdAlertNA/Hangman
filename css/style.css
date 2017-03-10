@@ -159,3 +159,11 @@
     	height: 50px;
     	width: 75px;
     }
+
+    #incorrect {
+    	font-size: 50px;
+    }
+
+    #correct {
+    	font-size: 50px;
+    }
