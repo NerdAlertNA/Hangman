@@ -5,6 +5,12 @@ window.onload = function() {
 	
 	var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)]; // randomly selects a word from wordBank
 
+	var underscores = [];
+
+	for (var i = 0; i < randomWord.length; i++) {
+		underscores.push('_ ');
+	}
+
 	var wrongLettersArray = [];
 
 	var rightLettersArray = [];
@@ -13,6 +19,10 @@ window.onload = function() {
 
 	console.log(randomWord);
 	console.log(wrongGuess);
+	console.log(wrongLettersArray);
+	console.log(rightLettersArray);
+
+	$('#word').append(underscores);
 
 	$('#submit').on('click', function() { // takes player input and compares to string
 		var guessedLetter = $('#guessInput').val(); // to determin if there is a match
@@ -36,7 +46,7 @@ window.onload = function() {
 						console.log(rightLettersArray);		  	// even through multiple itterations.
 					}
 				}
-				if (rightLettersArray.length === randomWord.length) {   // if .lenth of array === .length of word
+				if (rightLettersArray.length === randomWord.length) {   // if .length of array === .length of word
 					alert('You survived!');								// alert "You survived!"
 				}
 			}
